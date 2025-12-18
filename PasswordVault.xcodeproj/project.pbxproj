@@ -6,14 +6,167 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		620255F92EE45A6F007C6F6E /* PasswordVaultAutoFillCredentialListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620255F82EE45A6F007C6F6E /* PasswordVaultAutoFillCredentialListView.swift */; };
+		620255FB2EE45A7B007C6F6E /* PasswordVaultAutoFillPremiumUpgradeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620255FA2EE45A7B007C6F6E /* PasswordVaultAutoFillPremiumUpgradeView.swift */; };
+		620255FD2EE45A82007C6F6E /* PasswordVaultAutoFillNoCredentialsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620255FC2EE45A82007C6F6E /* PasswordVaultAutoFillNoCredentialsView.swift */; };
+		620255FF2EE45A8D007C6F6E /* PasswordVaultAutoFillConfigurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620255FE2EE45A8D007C6F6E /* PasswordVaultAutoFillConfigurationView.swift */; };
+		620256012EE45A95007C6F6E /* PasswordVaultAutoFillBiometricAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620256002EE45A95007C6F6E /* PasswordVaultAutoFillBiometricAuthService.swift */; };
+		620256022EE48EA3007C6F6E /* PasswordVaultAutoFillCredentialListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620255F82EE45A6F007C6F6E /* PasswordVaultAutoFillCredentialListView.swift */; };
+		620256032EE48FA2007C6F6E /* PasswordVaultAutoFillBiometricAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620256002EE45A95007C6F6E /* PasswordVaultAutoFillBiometricAuthService.swift */; };
+		620256042EE48FC2007C6F6E /* PasswordVaultAutoFillPremiumUpgradeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620255FA2EE45A7B007C6F6E /* PasswordVaultAutoFillPremiumUpgradeView.swift */; };
+		620256052EE48FE2007C6F6E /* PasswordVaultAutoFillNoCredentialsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620255FC2EE45A82007C6F6E /* PasswordVaultAutoFillNoCredentialsView.swift */; };
+		620256062EE48FFF007C6F6E /* PasswordVaultAutoFillConfigurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620255FE2EE45A8D007C6F6E /* PasswordVaultAutoFillConfigurationView.swift */; };
+		620256072EE49099007C6F6E /* PasswordVaultAutoFillCredentialProviderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620255F62EE45A60007C6F6E /* PasswordVaultAutoFillCredentialProviderViewController.swift */; };
+		620256092EE498FE007C6F6E /* EXTENSION_TROUBLESHOOTING.md in Resources */ = {isa = PBXBuildFile; fileRef = 620256082EE498FE007C6F6E /* EXTENSION_TROUBLESHOOTING.md */; };
+		6202560B2EE49903007C6F6E /* QUICK_FIX_EXTENSION.md in Resources */ = {isa = PBXBuildFile; fileRef = 6202560A2EE49903007C6F6E /* QUICK_FIX_EXTENSION.md */; };
+		625FDB852EE0DAF200219362 /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 625FDB842EE0DAF200219362 /* AuthenticationServices.framework */; };
+		625FDB902EE0DAF200219362 /* PasswordVaultAutoFill.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 625FDB822EE0DAF200219362 /* PasswordVaultAutoFill.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		625FDB982EE0DE3D00219362 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 625FDB972EE0DE3D00219362 /* StoreKit.framework */; };
+		625FDBA92EE2FC1E00219362 /* Products.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 625FDBA82EE2FC1E00219362 /* Products.storekit */; };
+		625FDBAB2EE3045900219362 /* Credential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625FDBAA2EE3045900219362 /* Credential.swift */; };
+		625FDBAD2EE3046700219362 /* PasswordGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625FDBAC2EE3046700219362 /* PasswordGenerator.swift */; };
+		625FDBAF2EE3047D00219362 /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625FDBAE2EE3047D00219362 /* KeychainService.swift */; };
+		625FDBB12EE3049300219362 /* PremiumManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625FDBB02EE3049300219362 /* PremiumManager.swift */; };
+		625FDBB32EE304A700219362 /* PasswordHealthEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625FDBB22EE304A700219362 /* PasswordHealthEngine.swift */; };
+		625FDBB52EE304AF00219362 /* GeneratorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625FDBB42EE304AF00219362 /* GeneratorViewModel.swift */; };
+		625FDBB72EE304BE00219362 /* VaultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625FDBB62EE304BE00219362 /* VaultViewModel.swift */; };
+		625FDBB92EE304C800219362 /* HealthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625FDBB82EE304C800219362 /* HealthViewModel.swift */; };
+		625FDBBB2EE304D800219362 /* OnboardingFlowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625FDBBA2EE304D800219362 /* OnboardingFlowView.swift */; };
+		625FDBBD2EE304E900219362 /* PasswordGeneratorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625FDBBC2EE304E900219362 /* PasswordGeneratorView.swift */; };
+		625FDBBF2EE304F900219362 /* VaultListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625FDBBE2EE304F900219362 /* VaultListView.swift */; };
+		625FDBC32EE3051E00219362 /* AddCredentialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625FDBC22EE3051E00219362 /* AddCredentialView.swift */; };
+		625FDBC52EE3053300219362 /* HealthDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625FDBC42EE3053300219362 /* HealthDashboardView.swift */; };
+		625FDBC72EE3054700219362 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625FDBC62EE3054700219362 /* SettingsView.swift */; };
+		625FDBC92EE305AA00219362 /* PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625FDBC82EE305AA00219362 /* PaywallView.swift */; };
+		625FDBCB2EE305AD00219362 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625FDBCA2EE305AD00219362 /* MainTabView.swift */; };
+		625FDBCD2EE305B100219362 /* ExtensionCredentialListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625FDBCC2EE305B100219362 /* ExtensionCredentialListView.swift */; };
+		625FDBCF2EE305B400219362 /* ExtensionPremiumUpsellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625FDBCE2EE305B400219362 /* ExtensionPremiumUpsellView.swift */; };
+		625FDBD12EE305E000219362 /* SETUP_INSTRUCTIONS.md in Resources */ = {isa = PBXBuildFile; fileRef = 625FDBD02EE305E000219362 /* SETUP_INSTRUCTIONS.md */; };
+		625FDBD32EE3060500219362 /* FILE_STRUCTURE.md in Resources */ = {isa = PBXBuildFile; fileRef = 625FDBD22EE3060500219362 /* FILE_STRUCTURE.md */; };
+		625FDBD52EE3063200219362 /* QUICK_START.md in Resources */ = {isa = PBXBuildFile; fileRef = 625FDBD42EE3063200219362 /* QUICK_START.md */; };
+		625FDBD62EE3089200219362 /* Credential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625FDBAA2EE3045900219362 /* Credential.swift */; };
+		625FDBD72EE308E400219362 /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625FDBAE2EE3047D00219362 /* KeychainService.swift */; };
+		625FDBD82EE30DC200219362 /* ExtensionCredentialListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625FDBCC2EE305B100219362 /* ExtensionCredentialListView.swift */; };
+		625FDBD92EE30DE800219362 /* ExtensionPremiumUpsellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625FDBCE2EE305B400219362 /* ExtensionPremiumUpsellView.swift */; };
+		625FDBDB2EE315FC00219362 /* BUG_FIXES.md in Resources */ = {isa = PBXBuildFile; fileRef = 625FDBDA2EE315FC00219362 /* BUG_FIXES.md */; };
+		625FDBDD2EE31CA500219362 /* CRITICAL_FIXES.md in Resources */ = {isa = PBXBuildFile; fileRef = 625FDBDC2EE31CA500219362 /* CRITICAL_FIXES.md */; };
+		625FDBDF2EE33D5500219362 /* INTEGRATION_FIXES.md in Resources */ = {isa = PBXBuildFile; fileRef = 625FDBDE2EE33D5500219362 /* INTEGRATION_FIXES.md */; };
+		625FDBE32EE3434000219362 /* FINAL_BUILD_FIX.md in Resources */ = {isa = PBXBuildFile; fileRef = 625FDBE22EE3434000219362 /* FINAL_BUILD_FIX.md */; };
+		625FDBE52EE34F8E00219362 /* PASSWORD_FIX_FEATURE.md in Resources */ = {isa = PBXBuildFile; fileRef = 625FDBE42EE34F8E00219362 /* PASSWORD_FIX_FEATURE.md */; };
+		625FDBE72EE357FB00219362 /* STOREKIT_TROUBLESHOOTING.md in Resources */ = {isa = PBXBuildFile; fileRef = 625FDBE62EE357FB00219362 /* STOREKIT_TROUBLESHOOTING.md */; };
+		625FDBE92EE35C1800219362 /* SUBSCRIPTION_RESTORE_FIX.md in Resources */ = {isa = PBXBuildFile; fileRef = 625FDBE82EE35C1800219362 /* SUBSCRIPTION_RESTORE_FIX.md */; };
+		627DD3A42EE8019E00AA9DD6 /* AUTOFILL_UI_TROUBLESHOOTING.md in Resources */ = {isa = PBXBuildFile; fileRef = 627DD3A32EE8019E00AA9DD6 /* AUTOFILL_UI_TROUBLESHOOTING.md */; };
+		627DD3A62EE801E400AA9DD6 /* AUTOFILL_UI_FIX_SUMMARY.md in Resources */ = {isa = PBXBuildFile; fileRef = 627DD3A52EE801E400AA9DD6 /* AUTOFILL_UI_FIX_SUMMARY.md */; };
+		627DD3A82EE8021400AA9DD6 /* QUICK_FIX_REFERENCE.md in Resources */ = {isa = PBXBuildFile; fileRef = 627DD3A72EE8021400AA9DD6 /* QUICK_FIX_REFERENCE.md */; };
+		627DD3AA2EE8288E00AA9DD6 /* EXTENSION_NOT_LAUNCHING_FIX.md in Resources */ = {isa = PBXBuildFile; fileRef = 627DD3A92EE8288E00AA9DD6 /* EXTENSION_NOT_LAUNCHING_FIX.md */; };
+		627DD3AC2EE828AF00AA9DD6 /* QUICK_START_TESTING.md in Resources */ = {isa = PBXBuildFile; fileRef = 627DD3AB2EE828AF00AA9DD6 /* QUICK_START_TESTING.md */; };
+		627DD3B02EE832F400AA9DD6 /* CRITICAL_EXTENSION_FIX.md in Resources */ = {isa = PBXBuildFile; fileRef = 627DD3AF2EE832F400AA9DD6 /* CRITICAL_EXTENSION_FIX.md */; };
+		627DD3B22EE8331100AA9DD6 /* DO_THIS_NOW.md in Resources */ = {isa = PBXBuildFile; fileRef = 627DD3B12EE8331100AA9DD6 /* DO_THIS_NOW.md */; };
+		627DD3B42EEF8A0000AA9DD6 /* SecureKeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627DD3B32EEF8A0000AA9DD6 /* SecureKeychainService.swift */; };
+		627DD3B52EEF8A0000AA9DD6 /* SecureKeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627DD3B32EEF8A0000AA9DD6 /* SecureKeychainService.swift */; };
+		627DD3B72EEF8B0000AA9DD6 /* iCloudSyncManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627DD3B62EEF8B0000AA9DD6 /* iCloudSyncManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		625FDB8E2EE0DAF200219362 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 622F27B42EDFB6CD00EF7D3F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 625FDB812EE0DAF200219362;
+			remoteInfo = PasswordVaultAutoFill;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		625FDB912EE0DAF200219362 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				625FDB902EE0DAF200219362 /* PasswordVaultAutoFill.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		620255F62EE45A60007C6F6E /* PasswordVaultAutoFillCredentialProviderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordVaultAutoFillCredentialProviderViewController.swift; sourceTree = "<group>"; };
+		620255F82EE45A6F007C6F6E /* PasswordVaultAutoFillCredentialListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordVaultAutoFillCredentialListView.swift; sourceTree = "<group>"; };
+		620255FA2EE45A7B007C6F6E /* PasswordVaultAutoFillPremiumUpgradeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordVaultAutoFillPremiumUpgradeView.swift; sourceTree = "<group>"; };
+		620255FC2EE45A82007C6F6E /* PasswordVaultAutoFillNoCredentialsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordVaultAutoFillNoCredentialsView.swift; sourceTree = "<group>"; };
+		620255FE2EE45A8D007C6F6E /* PasswordVaultAutoFillConfigurationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordVaultAutoFillConfigurationView.swift; sourceTree = "<group>"; };
+		620256002EE45A95007C6F6E /* PasswordVaultAutoFillBiometricAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordVaultAutoFillBiometricAuthService.swift; sourceTree = "<group>"; };
+		620256082EE498FE007C6F6E /* EXTENSION_TROUBLESHOOTING.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = EXTENSION_TROUBLESHOOTING.md; sourceTree = "<group>"; };
+		6202560A2EE49903007C6F6E /* QUICK_FIX_EXTENSION.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = QUICK_FIX_EXTENSION.md; sourceTree = "<group>"; };
 		622F27BC2EDFB6CD00EF7D3F /* PasswordVault.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PasswordVault.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		625FDB822EE0DAF200219362 /* PasswordVaultAutoFill.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PasswordVaultAutoFill.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		625FDB842EE0DAF200219362 /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = System/Library/Frameworks/AuthenticationServices.framework; sourceTree = SDKROOT; };
+		625FDB972EE0DE3D00219362 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		625FDBA82EE2FC1E00219362 /* Products.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Products.storekit; sourceTree = "<group>"; };
+		625FDBAA2EE3045900219362 /* Credential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credential.swift; sourceTree = "<group>"; };
+		625FDBAC2EE3046700219362 /* PasswordGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordGenerator.swift; sourceTree = "<group>"; };
+		625FDBAE2EE3047D00219362 /* KeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
+		625FDBB02EE3049300219362 /* PremiumManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumManager.swift; sourceTree = "<group>"; };
+		625FDBB22EE304A700219362 /* PasswordHealthEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordHealthEngine.swift; sourceTree = "<group>"; };
+		625FDBB42EE304AF00219362 /* GeneratorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratorViewModel.swift; sourceTree = "<group>"; };
+		625FDBB62EE304BE00219362 /* VaultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaultViewModel.swift; sourceTree = "<group>"; };
+		625FDBB82EE304C800219362 /* HealthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthViewModel.swift; sourceTree = "<group>"; };
+		625FDBBA2EE304D800219362 /* OnboardingFlowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingFlowView.swift; sourceTree = "<group>"; };
+		625FDBBC2EE304E900219362 /* PasswordGeneratorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordGeneratorView.swift; sourceTree = "<group>"; };
+		625FDBBE2EE304F900219362 /* VaultListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaultListView.swift; sourceTree = "<group>"; };
+		625FDBC22EE3051E00219362 /* AddCredentialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCredentialView.swift; sourceTree = "<group>"; };
+		625FDBC42EE3053300219362 /* HealthDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthDashboardView.swift; sourceTree = "<group>"; };
+		625FDBC62EE3054700219362 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		625FDBC82EE305AA00219362 /* PaywallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallView.swift; sourceTree = "<group>"; };
+		625FDBCA2EE305AD00219362 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		625FDBCC2EE305B100219362 /* ExtensionCredentialListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionCredentialListView.swift; sourceTree = "<group>"; };
+		625FDBCE2EE305B400219362 /* ExtensionPremiumUpsellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionPremiumUpsellView.swift; sourceTree = "<group>"; };
+		625FDBD02EE305E000219362 /* SETUP_INSTRUCTIONS.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = SETUP_INSTRUCTIONS.md; sourceTree = "<group>"; };
+		625FDBD22EE3060500219362 /* FILE_STRUCTURE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = FILE_STRUCTURE.md; sourceTree = "<group>"; };
+		625FDBD42EE3063200219362 /* QUICK_START.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = QUICK_START.md; sourceTree = "<group>"; };
+		625FDBDA2EE315FC00219362 /* BUG_FIXES.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = BUG_FIXES.md; sourceTree = "<group>"; };
+		625FDBDC2EE31CA500219362 /* CRITICAL_FIXES.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CRITICAL_FIXES.md; sourceTree = "<group>"; };
+		625FDBDE2EE33D5500219362 /* INTEGRATION_FIXES.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = INTEGRATION_FIXES.md; sourceTree = "<group>"; };
+		625FDBE22EE3434000219362 /* FINAL_BUILD_FIX.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = FINAL_BUILD_FIX.md; sourceTree = "<group>"; };
+		625FDBE42EE34F8E00219362 /* PASSWORD_FIX_FEATURE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = PASSWORD_FIX_FEATURE.md; sourceTree = "<group>"; };
+		625FDBE62EE357FB00219362 /* STOREKIT_TROUBLESHOOTING.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = STOREKIT_TROUBLESHOOTING.md; sourceTree = "<group>"; };
+		625FDBE82EE35C1800219362 /* SUBSCRIPTION_RESTORE_FIX.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = SUBSCRIPTION_RESTORE_FIX.md; sourceTree = "<group>"; };
+		627DD3A32EE8019E00AA9DD6 /* AUTOFILL_UI_TROUBLESHOOTING.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = AUTOFILL_UI_TROUBLESHOOTING.md; sourceTree = "<group>"; };
+		627DD3A52EE801E400AA9DD6 /* AUTOFILL_UI_FIX_SUMMARY.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = AUTOFILL_UI_FIX_SUMMARY.md; sourceTree = "<group>"; };
+		627DD3A72EE8021400AA9DD6 /* QUICK_FIX_REFERENCE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = QUICK_FIX_REFERENCE.md; sourceTree = "<group>"; };
+		627DD3A92EE8288E00AA9DD6 /* EXTENSION_NOT_LAUNCHING_FIX.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = EXTENSION_NOT_LAUNCHING_FIX.md; sourceTree = "<group>"; };
+		627DD3AB2EE828AF00AA9DD6 /* QUICK_START_TESTING.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = QUICK_START_TESTING.md; sourceTree = "<group>"; };
+		627DD3AF2EE832F400AA9DD6 /* CRITICAL_EXTENSION_FIX.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CRITICAL_EXTENSION_FIX.md; sourceTree = "<group>"; };
+		627DD3B12EE8331100AA9DD6 /* DO_THIS_NOW.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = DO_THIS_NOW.md; sourceTree = "<group>"; };
+		627DD3B32EEF8A0000AA9DD6 /* SecureKeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureKeychainService.swift; sourceTree = "<group>"; };
+		627DD3B62EEF8B0000AA9DD6 /* iCloudSyncManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iCloudSyncManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		625FDB942EE0DAF200219362 /* Exceptions for "PasswordVaultAutoFill" folder in "PasswordVaultAutoFill" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 625FDB812EE0DAF200219362 /* PasswordVaultAutoFill */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		622F27BE2EDFB6CD00EF7D3F /* PasswordVault */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = PasswordVault;
+			sourceTree = "<group>";
+		};
+		625FDB862EE0DAF200219362 /* PasswordVaultAutoFill */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				625FDB942EE0DAF200219362 /* Exceptions for "PasswordVaultAutoFill" folder in "PasswordVaultAutoFill" target */,
+			);
+			path = PasswordVaultAutoFill;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -23,6 +176,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				625FDB982EE0DE3D00219362 /* StoreKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		625FDB7F2EE0DAF200219362 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				625FDB852EE0DAF200219362 /* AuthenticationServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -32,8 +194,56 @@
 		622F27B32EDFB6CD00EF7D3F = {
 			isa = PBXGroup;
 			children = (
+				625FDBA82EE2FC1E00219362 /* Products.storekit */,
 				622F27BE2EDFB6CD00EF7D3F /* PasswordVault */,
+				625FDB862EE0DAF200219362 /* PasswordVaultAutoFill */,
+				625FDB832EE0DAF200219362 /* Frameworks */,
 				622F27BD2EDFB6CD00EF7D3F /* Products */,
+				625FDBAA2EE3045900219362 /* Credential.swift */,
+				625FDBAC2EE3046700219362 /* PasswordGenerator.swift */,
+				625FDBAE2EE3047D00219362 /* KeychainService.swift */,
+				627DD3B32EEF8A0000AA9DD6 /* SecureKeychainService.swift */,
+				627DD3B62EEF8B0000AA9DD6 /* iCloudSyncManager.swift */,
+				625FDBB02EE3049300219362 /* PremiumManager.swift */,
+				625FDBB22EE304A700219362 /* PasswordHealthEngine.swift */,
+				625FDBB42EE304AF00219362 /* GeneratorViewModel.swift */,
+				625FDBB62EE304BE00219362 /* VaultViewModel.swift */,
+				625FDBB82EE304C800219362 /* HealthViewModel.swift */,
+				625FDBBA2EE304D800219362 /* OnboardingFlowView.swift */,
+				625FDBBC2EE304E900219362 /* PasswordGeneratorView.swift */,
+				625FDBBE2EE304F900219362 /* VaultListView.swift */,
+				625FDBC22EE3051E00219362 /* AddCredentialView.swift */,
+				625FDBC42EE3053300219362 /* HealthDashboardView.swift */,
+				625FDBC62EE3054700219362 /* SettingsView.swift */,
+				625FDBC82EE305AA00219362 /* PaywallView.swift */,
+				625FDBCA2EE305AD00219362 /* MainTabView.swift */,
+				625FDBCC2EE305B100219362 /* ExtensionCredentialListView.swift */,
+				625FDBCE2EE305B400219362 /* ExtensionPremiumUpsellView.swift */,
+				625FDBD02EE305E000219362 /* SETUP_INSTRUCTIONS.md */,
+				625FDBD22EE3060500219362 /* FILE_STRUCTURE.md */,
+				625FDBD42EE3063200219362 /* QUICK_START.md */,
+				625FDBDA2EE315FC00219362 /* BUG_FIXES.md */,
+				625FDBDC2EE31CA500219362 /* CRITICAL_FIXES.md */,
+				625FDBDE2EE33D5500219362 /* INTEGRATION_FIXES.md */,
+				625FDBE22EE3434000219362 /* FINAL_BUILD_FIX.md */,
+				625FDBE42EE34F8E00219362 /* PASSWORD_FIX_FEATURE.md */,
+				625FDBE62EE357FB00219362 /* STOREKIT_TROUBLESHOOTING.md */,
+				625FDBE82EE35C1800219362 /* SUBSCRIPTION_RESTORE_FIX.md */,
+				620255F62EE45A60007C6F6E /* PasswordVaultAutoFillCredentialProviderViewController.swift */,
+				620255F82EE45A6F007C6F6E /* PasswordVaultAutoFillCredentialListView.swift */,
+				620255FA2EE45A7B007C6F6E /* PasswordVaultAutoFillPremiumUpgradeView.swift */,
+				620255FC2EE45A82007C6F6E /* PasswordVaultAutoFillNoCredentialsView.swift */,
+				620255FE2EE45A8D007C6F6E /* PasswordVaultAutoFillConfigurationView.swift */,
+				620256002EE45A95007C6F6E /* PasswordVaultAutoFillBiometricAuthService.swift */,
+				620256082EE498FE007C6F6E /* EXTENSION_TROUBLESHOOTING.md */,
+				6202560A2EE49903007C6F6E /* QUICK_FIX_EXTENSION.md */,
+				627DD3A32EE8019E00AA9DD6 /* AUTOFILL_UI_TROUBLESHOOTING.md */,
+				627DD3A52EE801E400AA9DD6 /* AUTOFILL_UI_FIX_SUMMARY.md */,
+				627DD3A72EE8021400AA9DD6 /* QUICK_FIX_REFERENCE.md */,
+				627DD3A92EE8288E00AA9DD6 /* EXTENSION_NOT_LAUNCHING_FIX.md */,
+				627DD3AB2EE828AF00AA9DD6 /* QUICK_START_TESTING.md */,
+				627DD3AF2EE832F400AA9DD6 /* CRITICAL_EXTENSION_FIX.md */,
+				627DD3B12EE8331100AA9DD6 /* DO_THIS_NOW.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -41,8 +251,18 @@
 			isa = PBXGroup;
 			children = (
 				622F27BC2EDFB6CD00EF7D3F /* PasswordVault.app */,
+				625FDB822EE0DAF200219362 /* PasswordVaultAutoFill.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		625FDB832EE0DAF200219362 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				625FDB972EE0DE3D00219362 /* StoreKit.framework */,
+				625FDB842EE0DAF200219362 /* AuthenticationServices.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -55,10 +275,12 @@
 				622F27B82EDFB6CD00EF7D3F /* Sources */,
 				622F27B92EDFB6CD00EF7D3F /* Frameworks */,
 				622F27BA2EDFB6CD00EF7D3F /* Resources */,
+				625FDB912EE0DAF200219362 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				625FDB8F2EE0DAF200219362 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				622F27BE2EDFB6CD00EF7D3F /* PasswordVault */,
@@ -69,6 +291,28 @@
 			productName = PasswordVault;
 			productReference = 622F27BC2EDFB6CD00EF7D3F /* PasswordVault.app */;
 			productType = "com.apple.product-type.application";
+		};
+		625FDB812EE0DAF200219362 /* PasswordVaultAutoFill */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 625FDB952EE0DAF200219362 /* Build configuration list for PBXNativeTarget "PasswordVaultAutoFill" */;
+			buildPhases = (
+				625FDB7E2EE0DAF200219362 /* Sources */,
+				625FDB7F2EE0DAF200219362 /* Frameworks */,
+				625FDB802EE0DAF200219362 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				625FDB862EE0DAF200219362 /* PasswordVaultAutoFill */,
+			);
+			name = PasswordVaultAutoFill;
+			packageProductDependencies = (
+			);
+			productName = PasswordVaultAutoFill;
+			productReference = 625FDB822EE0DAF200219362 /* PasswordVaultAutoFill.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -81,6 +325,9 @@
 				LastUpgradeCheck = 2610;
 				TargetAttributes = {
 					622F27BB2EDFB6CD00EF7D3F = {
+						CreatedOnToolsVersion = 26.1.1;
+					};
+					625FDB812EE0DAF200219362 = {
 						CreatedOnToolsVersion = 26.1.1;
 					};
 				};
@@ -100,12 +347,40 @@
 			projectRoot = "";
 			targets = (
 				622F27BB2EDFB6CD00EF7D3F /* PasswordVault */,
+				625FDB812EE0DAF200219362 /* PasswordVaultAutoFill */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		622F27BA2EDFB6CD00EF7D3F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				625FDBDD2EE31CA500219362 /* CRITICAL_FIXES.md in Resources */,
+				625FDBD32EE3060500219362 /* FILE_STRUCTURE.md in Resources */,
+				620256092EE498FE007C6F6E /* EXTENSION_TROUBLESHOOTING.md in Resources */,
+				627DD3B02EE832F400AA9DD6 /* CRITICAL_EXTENSION_FIX.md in Resources */,
+				627DD3A42EE8019E00AA9DD6 /* AUTOFILL_UI_TROUBLESHOOTING.md in Resources */,
+				625FDBE72EE357FB00219362 /* STOREKIT_TROUBLESHOOTING.md in Resources */,
+				627DD3B22EE8331100AA9DD6 /* DO_THIS_NOW.md in Resources */,
+				625FDBDB2EE315FC00219362 /* BUG_FIXES.md in Resources */,
+				625FDBA92EE2FC1E00219362 /* Products.storekit in Resources */,
+				627DD3A82EE8021400AA9DD6 /* QUICK_FIX_REFERENCE.md in Resources */,
+				625FDBD52EE3063200219362 /* QUICK_START.md in Resources */,
+				627DD3A62EE801E400AA9DD6 /* AUTOFILL_UI_FIX_SUMMARY.md in Resources */,
+				625FDBDF2EE33D5500219362 /* INTEGRATION_FIXES.md in Resources */,
+				627DD3AA2EE8288E00AA9DD6 /* EXTENSION_NOT_LAUNCHING_FIX.md in Resources */,
+				625FDBE52EE34F8E00219362 /* PASSWORD_FIX_FEATURE.md in Resources */,
+				625FDBE92EE35C1800219362 /* SUBSCRIPTION_RESTORE_FIX.md in Resources */,
+				6202560B2EE49903007C6F6E /* QUICK_FIX_EXTENSION.md in Resources */,
+				627DD3AC2EE828AF00AA9DD6 /* QUICK_START_TESTING.md in Resources */,
+				625FDBE32EE3434000219362 /* FINAL_BUILD_FIX.md in Resources */,
+				625FDBD12EE305E000219362 /* SETUP_INSTRUCTIONS.md in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		625FDB802EE0DAF200219362 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -119,10 +394,61 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				625FDBBB2EE304D800219362 /* OnboardingFlowView.swift in Sources */,
+				620256012EE45A95007C6F6E /* PasswordVaultAutoFillBiometricAuthService.swift in Sources */,
+				625FDBC92EE305AA00219362 /* PaywallView.swift in Sources */,
+				625FDBAD2EE3046700219362 /* PasswordGenerator.swift in Sources */,
+				620255FF2EE45A8D007C6F6E /* PasswordVaultAutoFillConfigurationView.swift in Sources */,
+				620255FD2EE45A82007C6F6E /* PasswordVaultAutoFillNoCredentialsView.swift in Sources */,
+				625FDBB72EE304BE00219362 /* VaultViewModel.swift in Sources */,
+				625FDBB12EE3049300219362 /* PremiumManager.swift in Sources */,
+				625FDBCB2EE305AD00219362 /* MainTabView.swift in Sources */,
+				625FDBBF2EE304F900219362 /* VaultListView.swift in Sources */,
+				620255FB2EE45A7B007C6F6E /* PasswordVaultAutoFillPremiumUpgradeView.swift in Sources */,
+				625FDBC72EE3054700219362 /* SettingsView.swift in Sources */,
+				625FDBCF2EE305B400219362 /* ExtensionPremiumUpsellView.swift in Sources */,
+				625FDBCD2EE305B100219362 /* ExtensionCredentialListView.swift in Sources */,
+				625FDBAB2EE3045900219362 /* Credential.swift in Sources */,
+				625FDBAF2EE3047D00219362 /* KeychainService.swift in Sources */,
+				627DD3B42EEF8A0000AA9DD6 /* SecureKeychainService.swift in Sources */,
+				627DD3B72EEF8B0000AA9DD6 /* iCloudSyncManager.swift in Sources */,
+				625FDBB52EE304AF00219362 /* GeneratorViewModel.swift in Sources */,
+				625FDBC32EE3051E00219362 /* AddCredentialView.swift in Sources */,
+				625FDBB92EE304C800219362 /* HealthViewModel.swift in Sources */,
+				620255F92EE45A6F007C6F6E /* PasswordVaultAutoFillCredentialListView.swift in Sources */,
+				625FDBB32EE304A700219362 /* PasswordHealthEngine.swift in Sources */,
+				625FDBC52EE3053300219362 /* HealthDashboardView.swift in Sources */,
+				625FDBBD2EE304E900219362 /* PasswordGeneratorView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		625FDB7E2EE0DAF200219362 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				625FDBD62EE3089200219362 /* Credential.swift in Sources */,
+				620256042EE48FC2007C6F6E /* PasswordVaultAutoFillPremiumUpgradeView.swift in Sources */,
+				625FDBD92EE30DE800219362 /* ExtensionPremiumUpsellView.swift in Sources */,
+				620256072EE49099007C6F6E /* PasswordVaultAutoFillCredentialProviderViewController.swift in Sources */,
+				625FDBD82EE30DC200219362 /* ExtensionCredentialListView.swift in Sources */,
+				625FDBD72EE308E400219362 /* KeychainService.swift in Sources */,
+				627DD3B52EEF8A0000AA9DD6 /* SecureKeychainService.swift in Sources */,
+				620256062EE48FFF007C6F6E /* PasswordVaultAutoFillConfigurationView.swift in Sources */,
+				620256032EE48FA2007C6F6E /* PasswordVaultAutoFillBiometricAuthService.swift in Sources */,
+				620256052EE48FE2007C6F6E /* PasswordVaultAutoFillNoCredentialsView.swift in Sources */,
+				620256022EE48EA3007C6F6E /* PasswordVaultAutoFillCredentialListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		625FDB8F2EE0DAF200219362 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 625FDB812EE0DAF200219362 /* PasswordVaultAutoFill */;
+			targetProxy = 625FDB8E2EE0DAF200219362 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		622F27C52EDFB6CF00EF7D3F /* Debug */ = {
@@ -251,11 +577,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PasswordVault/PasswordVault.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Y7JDKP76G9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_FILE[sdk=*]" = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -283,11 +611,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PasswordVault/PasswordVault.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Y7JDKP76G9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_FILE[sdk=*]" = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -303,6 +633,64 @@
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		625FDB922EE0DAF200219362 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = PasswordVaultAutoFill/PasswordVaultAutoFill.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y7JDKP76G9;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = PasswordVaultAutoFill/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = PasswordVaultAutoFill;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.uk.techjonesai.PasswordVault.PasswordVaultAutoFill;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		625FDB932EE0DAF200219362 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = PasswordVaultAutoFill/PasswordVaultAutoFill.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y7JDKP76G9;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = PasswordVaultAutoFill/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = PasswordVaultAutoFill;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.uk.techjonesai.PasswordVault.PasswordVaultAutoFill;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
@@ -327,6 +715,15 @@
 			buildConfigurations = (
 				622F27C82EDFB6CF00EF7D3F /* Debug */,
 				622F27C92EDFB6CF00EF7D3F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		625FDB952EE0DAF200219362 /* Build configuration list for PBXNativeTarget "PasswordVaultAutoFill" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				625FDB922EE0DAF200219362 /* Debug */,
+				625FDB932EE0DAF200219362 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

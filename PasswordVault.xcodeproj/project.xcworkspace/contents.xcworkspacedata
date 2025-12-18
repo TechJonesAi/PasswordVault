@@ -4,4 +4,43 @@
    <FileRef
       location = "self:">
    </FileRef>
+   <FileRef
+      location = "group:EXTENSION_MEMORY_OPTIMIZATION.md">
+   </FileRef>
+   <FileRef
+      location = "group:MEMORY_FIX_SUMMARY.md">
+   </FileRef>
+   <FileRef
+      location = "group:TESTING_GUIDE.md">
+   </FileRef>
+   <FileRef
+      location = "group:COMPLETE_OVERVIEW.md">
+   </FileRef>
+   <FileRef
+      location = "group:VISUAL_MEMORY_GUIDE.md">
+   </FileRef>
+   <FileRef
+      location = "group:OPTIMIZATION_CHECKLIST.md">
+   </FileRef>
+   <FileRef
+      location = "group:ENTITLEMENT_FIX.md">
+   </FileRef>
+   <FileRef
+      location = "group:ENTITLEMENT_FIX_SUMMARY.md">
+   </FileRef>
+   <FileRef
+      location = "group:VISUAL_AUTH_FIX.md">
+   </FileRef>
+   <FileRef
+      location = "group:UI_DISPLAY_FIX.md">
+   </FileRef>
+   <FileRef
+      location = "group:CredentialProviderViewController_CLEAN.swift">
+   </FileRef>
+   <FileRef
+      location = "group:PasswordVaultAutoFillCredentialProviderViewController_FINAL.swift">
+   </FileRef>
+   <FileRef
+      location = "group:CRITICAL_FIX.md">
+   </FileRef>
 </Workspace>
