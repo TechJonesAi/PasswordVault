@@ -18,8 +18,6 @@
 		620256052EE48FE2007C6F6E /* PasswordVaultAutoFillNoCredentialsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620255FC2EE45A82007C6F6E /* PasswordVaultAutoFillNoCredentialsView.swift */; };
 		620256062EE48FFF007C6F6E /* PasswordVaultAutoFillConfigurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620255FE2EE45A8D007C6F6E /* PasswordVaultAutoFillConfigurationView.swift */; };
 		620256072EE49099007C6F6E /* PasswordVaultAutoFillCredentialProviderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620255F62EE45A60007C6F6E /* PasswordVaultAutoFillCredentialProviderViewController.swift */; };
-		620256092EE498FE007C6F6E /* EXTENSION_TROUBLESHOOTING.md in Resources */ = {isa = PBXBuildFile; fileRef = 620256082EE498FE007C6F6E /* EXTENSION_TROUBLESHOOTING.md */; };
-		6202560B2EE49903007C6F6E /* QUICK_FIX_EXTENSION.md in Resources */ = {isa = PBXBuildFile; fileRef = 6202560A2EE49903007C6F6E /* QUICK_FIX_EXTENSION.md */; };
 		625FDB852EE0DAF200219362 /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 625FDB842EE0DAF200219362 /* AuthenticationServices.framework */; };
 		625FDB902EE0DAF200219362 /* PasswordVaultAutoFill.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 625FDB822EE0DAF200219362 /* PasswordVaultAutoFill.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		625FDB982EE0DE3D00219362 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 625FDB972EE0DE3D00219362 /* StoreKit.framework */; };
@@ -42,27 +40,10 @@
 		625FDBCB2EE305AD00219362 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625FDBCA2EE305AD00219362 /* MainTabView.swift */; };
 		625FDBCD2EE305B100219362 /* ExtensionCredentialListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625FDBCC2EE305B100219362 /* ExtensionCredentialListView.swift */; };
 		625FDBCF2EE305B400219362 /* ExtensionPremiumUpsellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625FDBCE2EE305B400219362 /* ExtensionPremiumUpsellView.swift */; };
-		625FDBD12EE305E000219362 /* SETUP_INSTRUCTIONS.md in Resources */ = {isa = PBXBuildFile; fileRef = 625FDBD02EE305E000219362 /* SETUP_INSTRUCTIONS.md */; };
-		625FDBD32EE3060500219362 /* FILE_STRUCTURE.md in Resources */ = {isa = PBXBuildFile; fileRef = 625FDBD22EE3060500219362 /* FILE_STRUCTURE.md */; };
-		625FDBD52EE3063200219362 /* QUICK_START.md in Resources */ = {isa = PBXBuildFile; fileRef = 625FDBD42EE3063200219362 /* QUICK_START.md */; };
 		625FDBD62EE3089200219362 /* Credential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625FDBAA2EE3045900219362 /* Credential.swift */; };
 		625FDBD72EE308E400219362 /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625FDBAE2EE3047D00219362 /* KeychainService.swift */; };
 		625FDBD82EE30DC200219362 /* ExtensionCredentialListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625FDBCC2EE305B100219362 /* ExtensionCredentialListView.swift */; };
 		625FDBD92EE30DE800219362 /* ExtensionPremiumUpsellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625FDBCE2EE305B400219362 /* ExtensionPremiumUpsellView.swift */; };
-		625FDBDB2EE315FC00219362 /* BUG_FIXES.md in Resources */ = {isa = PBXBuildFile; fileRef = 625FDBDA2EE315FC00219362 /* BUG_FIXES.md */; };
-		625FDBDD2EE31CA500219362 /* CRITICAL_FIXES.md in Resources */ = {isa = PBXBuildFile; fileRef = 625FDBDC2EE31CA500219362 /* CRITICAL_FIXES.md */; };
-		625FDBDF2EE33D5500219362 /* INTEGRATION_FIXES.md in Resources */ = {isa = PBXBuildFile; fileRef = 625FDBDE2EE33D5500219362 /* INTEGRATION_FIXES.md */; };
-		625FDBE32EE3434000219362 /* FINAL_BUILD_FIX.md in Resources */ = {isa = PBXBuildFile; fileRef = 625FDBE22EE3434000219362 /* FINAL_BUILD_FIX.md */; };
-		625FDBE52EE34F8E00219362 /* PASSWORD_FIX_FEATURE.md in Resources */ = {isa = PBXBuildFile; fileRef = 625FDBE42EE34F8E00219362 /* PASSWORD_FIX_FEATURE.md */; };
-		625FDBE72EE357FB00219362 /* STOREKIT_TROUBLESHOOTING.md in Resources */ = {isa = PBXBuildFile; fileRef = 625FDBE62EE357FB00219362 /* STOREKIT_TROUBLESHOOTING.md */; };
-		625FDBE92EE35C1800219362 /* SUBSCRIPTION_RESTORE_FIX.md in Resources */ = {isa = PBXBuildFile; fileRef = 625FDBE82EE35C1800219362 /* SUBSCRIPTION_RESTORE_FIX.md */; };
-		627DD3A42EE8019E00AA9DD6 /* AUTOFILL_UI_TROUBLESHOOTING.md in Resources */ = {isa = PBXBuildFile; fileRef = 627DD3A32EE8019E00AA9DD6 /* AUTOFILL_UI_TROUBLESHOOTING.md */; };
-		627DD3A62EE801E400AA9DD6 /* AUTOFILL_UI_FIX_SUMMARY.md in Resources */ = {isa = PBXBuildFile; fileRef = 627DD3A52EE801E400AA9DD6 /* AUTOFILL_UI_FIX_SUMMARY.md */; };
-		627DD3A82EE8021400AA9DD6 /* QUICK_FIX_REFERENCE.md in Resources */ = {isa = PBXBuildFile; fileRef = 627DD3A72EE8021400AA9DD6 /* QUICK_FIX_REFERENCE.md */; };
-		627DD3AA2EE8288E00AA9DD6 /* EXTENSION_NOT_LAUNCHING_FIX.md in Resources */ = {isa = PBXBuildFile; fileRef = 627DD3A92EE8288E00AA9DD6 /* EXTENSION_NOT_LAUNCHING_FIX.md */; };
-		627DD3AC2EE828AF00AA9DD6 /* QUICK_START_TESTING.md in Resources */ = {isa = PBXBuildFile; fileRef = 627DD3AB2EE828AF00AA9DD6 /* QUICK_START_TESTING.md */; };
-		627DD3B02EE832F400AA9DD6 /* CRITICAL_EXTENSION_FIX.md in Resources */ = {isa = PBXBuildFile; fileRef = 627DD3AF2EE832F400AA9DD6 /* CRITICAL_EXTENSION_FIX.md */; };
-		627DD3B22EE8331100AA9DD6 /* DO_THIS_NOW.md in Resources */ = {isa = PBXBuildFile; fileRef = 627DD3B12EE8331100AA9DD6 /* DO_THIS_NOW.md */; };
 		627DD3B42EEF8A0000AA9DD6 /* SecureKeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627DD3B32EEF8A0000AA9DD6 /* SecureKeychainService.swift */; };
 		627DD3B52EEF8A0000AA9DD6 /* SecureKeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627DD3B32EEF8A0000AA9DD6 /* SecureKeychainService.swift */; };
 		627DD3B72EEF8B0000AA9DD6 /* iCloudSyncManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627DD3B62EEF8B0000AA9DD6 /* iCloudSyncManager.swift */; };
@@ -99,8 +80,6 @@
 		620255FC2EE45A82007C6F6E /* PasswordVaultAutoFillNoCredentialsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordVaultAutoFillNoCredentialsView.swift; sourceTree = "<group>"; };
 		620255FE2EE45A8D007C6F6E /* PasswordVaultAutoFillConfigurationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordVaultAutoFillConfigurationView.swift; sourceTree = "<group>"; };
 		620256002EE45A95007C6F6E /* PasswordVaultAutoFillBiometricAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordVaultAutoFillBiometricAuthService.swift; sourceTree = "<group>"; };
-		620256082EE498FE007C6F6E /* EXTENSION_TROUBLESHOOTING.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = EXTENSION_TROUBLESHOOTING.md; sourceTree = "<group>"; };
-		6202560A2EE49903007C6F6E /* QUICK_FIX_EXTENSION.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = QUICK_FIX_EXTENSION.md; sourceTree = "<group>"; };
 		622F27BC2EDFB6CD00EF7D3F /* PasswordVault.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PasswordVault.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		625FDB822EE0DAF200219362 /* PasswordVaultAutoFill.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PasswordVaultAutoFill.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		625FDB842EE0DAF200219362 /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = System/Library/Frameworks/AuthenticationServices.framework; sourceTree = SDKROOT; };
@@ -124,23 +103,6 @@
 		625FDBCA2EE305AD00219362 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		625FDBCC2EE305B100219362 /* ExtensionCredentialListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionCredentialListView.swift; sourceTree = "<group>"; };
 		625FDBCE2EE305B400219362 /* ExtensionPremiumUpsellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionPremiumUpsellView.swift; sourceTree = "<group>"; };
-		625FDBD02EE305E000219362 /* SETUP_INSTRUCTIONS.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = SETUP_INSTRUCTIONS.md; sourceTree = "<group>"; };
-		625FDBD22EE3060500219362 /* FILE_STRUCTURE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = FILE_STRUCTURE.md; sourceTree = "<group>"; };
-		625FDBD42EE3063200219362 /* QUICK_START.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = QUICK_START.md; sourceTree = "<group>"; };
-		625FDBDA2EE315FC00219362 /* BUG_FIXES.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = BUG_FIXES.md; sourceTree = "<group>"; };
-		625FDBDC2EE31CA500219362 /* CRITICAL_FIXES.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CRITICAL_FIXES.md; sourceTree = "<group>"; };
-		625FDBDE2EE33D5500219362 /* INTEGRATION_FIXES.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = INTEGRATION_FIXES.md; sourceTree = "<group>"; };
-		625FDBE22EE3434000219362 /* FINAL_BUILD_FIX.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = FINAL_BUILD_FIX.md; sourceTree = "<group>"; };
-		625FDBE42EE34F8E00219362 /* PASSWORD_FIX_FEATURE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = PASSWORD_FIX_FEATURE.md; sourceTree = "<group>"; };
-		625FDBE62EE357FB00219362 /* STOREKIT_TROUBLESHOOTING.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = STOREKIT_TROUBLESHOOTING.md; sourceTree = "<group>"; };
-		625FDBE82EE35C1800219362 /* SUBSCRIPTION_RESTORE_FIX.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = SUBSCRIPTION_RESTORE_FIX.md; sourceTree = "<group>"; };
-		627DD3A32EE8019E00AA9DD6 /* AUTOFILL_UI_TROUBLESHOOTING.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = AUTOFILL_UI_TROUBLESHOOTING.md; sourceTree = "<group>"; };
-		627DD3A52EE801E400AA9DD6 /* AUTOFILL_UI_FIX_SUMMARY.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = AUTOFILL_UI_FIX_SUMMARY.md; sourceTree = "<group>"; };
-		627DD3A72EE8021400AA9DD6 /* QUICK_FIX_REFERENCE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = QUICK_FIX_REFERENCE.md; sourceTree = "<group>"; };
-		627DD3A92EE8288E00AA9DD6 /* EXTENSION_NOT_LAUNCHING_FIX.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = EXTENSION_NOT_LAUNCHING_FIX.md; sourceTree = "<group>"; };
-		627DD3AB2EE828AF00AA9DD6 /* QUICK_START_TESTING.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = QUICK_START_TESTING.md; sourceTree = "<group>"; };
-		627DD3AF2EE832F400AA9DD6 /* CRITICAL_EXTENSION_FIX.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CRITICAL_EXTENSION_FIX.md; sourceTree = "<group>"; };
-		627DD3B12EE8331100AA9DD6 /* DO_THIS_NOW.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = DO_THIS_NOW.md; sourceTree = "<group>"; };
 		627DD3B32EEF8A0000AA9DD6 /* SecureKeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureKeychainService.swift; sourceTree = "<group>"; };
 		627DD3B62EEF8B0000AA9DD6 /* iCloudSyncManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iCloudSyncManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -219,31 +181,12 @@
 				625FDBCA2EE305AD00219362 /* MainTabView.swift */,
 				625FDBCC2EE305B100219362 /* ExtensionCredentialListView.swift */,
 				625FDBCE2EE305B400219362 /* ExtensionPremiumUpsellView.swift */,
-				625FDBD02EE305E000219362 /* SETUP_INSTRUCTIONS.md */,
-				625FDBD22EE3060500219362 /* FILE_STRUCTURE.md */,
-				625FDBD42EE3063200219362 /* QUICK_START.md */,
-				625FDBDA2EE315FC00219362 /* BUG_FIXES.md */,
-				625FDBDC2EE31CA500219362 /* CRITICAL_FIXES.md */,
-				625FDBDE2EE33D5500219362 /* INTEGRATION_FIXES.md */,
-				625FDBE22EE3434000219362 /* FINAL_BUILD_FIX.md */,
-				625FDBE42EE34F8E00219362 /* PASSWORD_FIX_FEATURE.md */,
-				625FDBE62EE357FB00219362 /* STOREKIT_TROUBLESHOOTING.md */,
-				625FDBE82EE35C1800219362 /* SUBSCRIPTION_RESTORE_FIX.md */,
 				620255F62EE45A60007C6F6E /* PasswordVaultAutoFillCredentialProviderViewController.swift */,
 				620255F82EE45A6F007C6F6E /* PasswordVaultAutoFillCredentialListView.swift */,
 				620255FA2EE45A7B007C6F6E /* PasswordVaultAutoFillPremiumUpgradeView.swift */,
 				620255FC2EE45A82007C6F6E /* PasswordVaultAutoFillNoCredentialsView.swift */,
 				620255FE2EE45A8D007C6F6E /* PasswordVaultAutoFillConfigurationView.swift */,
 				620256002EE45A95007C6F6E /* PasswordVaultAutoFillBiometricAuthService.swift */,
-				620256082EE498FE007C6F6E /* EXTENSION_TROUBLESHOOTING.md */,
-				6202560A2EE49903007C6F6E /* QUICK_FIX_EXTENSION.md */,
-				627DD3A32EE8019E00AA9DD6 /* AUTOFILL_UI_TROUBLESHOOTING.md */,
-				627DD3A52EE801E400AA9DD6 /* AUTOFILL_UI_FIX_SUMMARY.md */,
-				627DD3A72EE8021400AA9DD6 /* QUICK_FIX_REFERENCE.md */,
-				627DD3A92EE8288E00AA9DD6 /* EXTENSION_NOT_LAUNCHING_FIX.md */,
-				627DD3AB2EE828AF00AA9DD6 /* QUICK_START_TESTING.md */,
-				627DD3AF2EE832F400AA9DD6 /* CRITICAL_EXTENSION_FIX.md */,
-				627DD3B12EE8331100AA9DD6 /* DO_THIS_NOW.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -357,26 +300,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				625FDBDD2EE31CA500219362 /* CRITICAL_FIXES.md in Resources */,
-				625FDBD32EE3060500219362 /* FILE_STRUCTURE.md in Resources */,
-				620256092EE498FE007C6F6E /* EXTENSION_TROUBLESHOOTING.md in Resources */,
-				627DD3B02EE832F400AA9DD6 /* CRITICAL_EXTENSION_FIX.md in Resources */,
-				627DD3A42EE8019E00AA9DD6 /* AUTOFILL_UI_TROUBLESHOOTING.md in Resources */,
-				625FDBE72EE357FB00219362 /* STOREKIT_TROUBLESHOOTING.md in Resources */,
-				627DD3B22EE8331100AA9DD6 /* DO_THIS_NOW.md in Resources */,
-				625FDBDB2EE315FC00219362 /* BUG_FIXES.md in Resources */,
 				625FDBA92EE2FC1E00219362 /* Products.storekit in Resources */,
-				627DD3A82EE8021400AA9DD6 /* QUICK_FIX_REFERENCE.md in Resources */,
-				625FDBD52EE3063200219362 /* QUICK_START.md in Resources */,
-				627DD3A62EE801E400AA9DD6 /* AUTOFILL_UI_FIX_SUMMARY.md in Resources */,
-				625FDBDF2EE33D5500219362 /* INTEGRATION_FIXES.md in Resources */,
-				627DD3AA2EE8288E00AA9DD6 /* EXTENSION_NOT_LAUNCHING_FIX.md in Resources */,
-				625FDBE52EE34F8E00219362 /* PASSWORD_FIX_FEATURE.md in Resources */,
-				625FDBE92EE35C1800219362 /* SUBSCRIPTION_RESTORE_FIX.md in Resources */,
-				6202560B2EE49903007C6F6E /* QUICK_FIX_EXTENSION.md in Resources */,
-				627DD3AC2EE828AF00AA9DD6 /* QUICK_START_TESTING.md in Resources */,
-				625FDBE32EE3434000219362 /* FINAL_BUILD_FIX.md in Resources */,
-				625FDBD12EE305E000219362 /* SETUP_INSTRUCTIONS.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
