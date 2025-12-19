@@ -47,6 +47,10 @@
 		627DD3B42EEF8A0000AA9DD6 /* SecureKeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627DD3B32EEF8A0000AA9DD6 /* SecureKeychainService.swift */; };
 		627DD3B52EEF8A0000AA9DD6 /* SecureKeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627DD3B32EEF8A0000AA9DD6 /* SecureKeychainService.swift */; };
 		627DD3B72EEF8B0000AA9DD6 /* iCloudSyncManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627DD3B62EEF8B0000AA9DD6 /* iCloudSyncManager.swift */; };
+		628493512EF4BD060082A341 /* PasswordVaultShare.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 628493472EF4BD060082A341 /* PasswordVaultShare.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		628493572EF4BE090082A341 /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625FDBAE2EE3047D00219362 /* KeychainService.swift */; };
+		628493582EF4BE090082A341 /* Credential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625FDBAA2EE3045900219362 /* Credential.swift */; };
+		628493592EF4BE090082A341 /* SecureKeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627DD3B32EEF8A0000AA9DD6 /* SecureKeychainService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +61,13 @@
 			remoteGlobalIDString = 625FDB812EE0DAF200219362;
 			remoteInfo = PasswordVaultAutoFill;
 		};
+		6284934F2EF4BD060082A341 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 622F27B42EDFB6CD00EF7D3F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 628493462EF4BD060082A341;
+			remoteInfo = PasswordVaultShare;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -66,6 +77,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				628493512EF4BD060082A341 /* PasswordVaultShare.appex in Embed Foundation Extensions */,
 				625FDB902EE0DAF200219362 /* PasswordVaultAutoFill.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
@@ -105,6 +117,7 @@
 		625FDBCE2EE305B400219362 /* ExtensionPremiumUpsellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionPremiumUpsellView.swift; sourceTree = "<group>"; };
 		627DD3B32EEF8A0000AA9DD6 /* SecureKeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureKeychainService.swift; sourceTree = "<group>"; };
 		627DD3B62EEF8B0000AA9DD6 /* iCloudSyncManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iCloudSyncManager.swift; sourceTree = "<group>"; };
+		628493472EF4BD060082A341 /* PasswordVaultShare.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PasswordVaultShare.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -114,6 +127,13 @@
 				Info.plist,
 			);
 			target = 625FDB812EE0DAF200219362 /* PasswordVaultAutoFill */;
+		};
+		628493522EF4BD060082A341 /* Exceptions for "PasswordVaultShare" folder in "PasswordVaultShare" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 628493462EF4BD060082A341 /* PasswordVaultShare */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
@@ -129,6 +149,14 @@
 				625FDB942EE0DAF200219362 /* Exceptions for "PasswordVaultAutoFill" folder in "PasswordVaultAutoFill" target */,
 			);
 			path = PasswordVaultAutoFill;
+			sourceTree = "<group>";
+		};
+		628493482EF4BD060082A341 /* PasswordVaultShare */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				628493522EF4BD060082A341 /* Exceptions for "PasswordVaultShare" folder in "PasswordVaultShare" target */,
+			);
+			path = PasswordVaultShare;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -150,6 +178,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		628493442EF4BD060082A341 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -159,6 +194,7 @@
 				625FDBA82EE2FC1E00219362 /* Products.storekit */,
 				622F27BE2EDFB6CD00EF7D3F /* PasswordVault */,
 				625FDB862EE0DAF200219362 /* PasswordVaultAutoFill */,
+				628493482EF4BD060082A341 /* PasswordVaultShare */,
 				625FDB832EE0DAF200219362 /* Frameworks */,
 				622F27BD2EDFB6CD00EF7D3F /* Products */,
 				625FDBAA2EE3045900219362 /* Credential.swift */,
@@ -195,6 +231,7 @@
 			children = (
 				622F27BC2EDFB6CD00EF7D3F /* PasswordVault.app */,
 				625FDB822EE0DAF200219362 /* PasswordVaultAutoFill.appex */,
+				628493472EF4BD060082A341 /* PasswordVaultShare.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -224,6 +261,7 @@
 			);
 			dependencies = (
 				625FDB8F2EE0DAF200219362 /* PBXTargetDependency */,
+				628493502EF4BD060082A341 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				622F27BE2EDFB6CD00EF7D3F /* PasswordVault */,
@@ -257,6 +295,28 @@
 			productReference = 625FDB822EE0DAF200219362 /* PasswordVaultAutoFill.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		628493462EF4BD060082A341 /* PasswordVaultShare */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 628493532EF4BD060082A341 /* Build configuration list for PBXNativeTarget "PasswordVaultShare" */;
+			buildPhases = (
+				628493432EF4BD060082A341 /* Sources */,
+				628493442EF4BD060082A341 /* Frameworks */,
+				628493452EF4BD060082A341 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				628493482EF4BD060082A341 /* PasswordVaultShare */,
+			);
+			name = PasswordVaultShare;
+			packageProductDependencies = (
+			);
+			productName = PasswordVaultShare;
+			productReference = 628493472EF4BD060082A341 /* PasswordVaultShare.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -271,6 +331,9 @@
 						CreatedOnToolsVersion = 26.1.1;
 					};
 					625FDB812EE0DAF200219362 = {
+						CreatedOnToolsVersion = 26.1.1;
+					};
+					628493462EF4BD060082A341 = {
 						CreatedOnToolsVersion = 26.1.1;
 					};
 				};
@@ -291,6 +354,7 @@
 			targets = (
 				622F27BB2EDFB6CD00EF7D3F /* PasswordVault */,
 				625FDB812EE0DAF200219362 /* PasswordVaultAutoFill */,
+				628493462EF4BD060082A341 /* PasswordVaultShare */,
 			);
 		};
 /* End PBXProject section */
@@ -305,6 +369,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		625FDB802EE0DAF200219362 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		628493452EF4BD060082A341 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -364,6 +435,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		628493432EF4BD060082A341 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				628493572EF4BE090082A341 /* KeychainService.swift in Sources */,
+				628493582EF4BE090082A341 /* Credential.swift in Sources */,
+				628493592EF4BE090082A341 /* SecureKeychainService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -371,6 +452,11 @@
 			isa = PBXTargetDependency;
 			target = 625FDB812EE0DAF200219362 /* PasswordVaultAutoFill */;
 			targetProxy = 625FDB8E2EE0DAF200219362 /* PBXContainerItemProxy */;
+		};
+		628493502EF4BD060082A341 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 628493462EF4BD060082A341 /* PasswordVaultShare */;
+			targetProxy = 6284934F2EF4BD060082A341 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -622,6 +708,64 @@
 			};
 			name = Release;
 		};
+		628493542EF4BD060082A341 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = PasswordVaultShare/PasswordVaultShare.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y7JDKP76G9;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PasswordVaultShare/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = PasswordVaultShare;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.uk.techjonesai.PasswordVault.PasswordVaultShare;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		628493552EF4BD060082A341 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = PasswordVaultShare/PasswordVaultShare.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y7JDKP76G9;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PasswordVaultShare/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = PasswordVaultShare;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.uk.techjonesai.PasswordVault.PasswordVaultShare;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -648,6 +792,15 @@
 			buildConfigurations = (
 				625FDB922EE0DAF200219362 /* Debug */,
 				625FDB932EE0DAF200219362 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		628493532EF4BD060082A341 /* Build configuration list for PBXNativeTarget "PasswordVaultShare" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				628493542EF4BD060082A341 /* Debug */,
+				628493552EF4BD060082A341 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

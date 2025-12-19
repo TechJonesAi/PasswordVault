@@ -62,36 +62,29 @@ final class AppSettingsManager {
     }
     
     // MARK: - App Icon Options (Feature 8)
+    // NOTE: Only default icon available until alternate icon assets are created
     
     enum AppIconOption: String, CaseIterable, Identifiable {
         case `default` = "AppIcon"
-        case dark = "AppIconDark"
-        case blue = "AppIconBlue"
-        case green = "AppIconGreen"
-        case purple = "AppIconPurple"
-        case minimal = "AppIconMinimal"
+        // Alternate icons disabled - assets not yet created
+        // To enable: create 1024x1024 PNG icons and add to Assets.xcassets
+        // case dark = "AppIconDark"
+        // case blue = "AppIconBlue"
+        // case green = "AppIconGreen"
+        // case purple = "AppIconPurple"
+        // case minimal = "AppIconMinimal"
         
         var id: String { rawValue }
         
         var displayName: String {
             switch self {
             case .default: return "Default"
-            case .dark: return "Dark"
-            case .blue: return "Blue"
-            case .green: return "Green"
-            case .purple: return "Purple"
-            case .minimal: return "Minimal"
             }
         }
         
         var previewColor: Color {
             switch self {
             case .default: return .blue
-            case .dark: return .black
-            case .blue: return .cyan
-            case .green: return .green
-            case .purple: return .purple
-            case .minimal: return .gray
             }
         }
     }

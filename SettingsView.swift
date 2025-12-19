@@ -22,7 +22,6 @@ struct SettingsView: View {
     @State private var showRestoreAlert = false
     @State private var restoreMessage = ""
     @State private var showImportExport = false
-    @State private var showAppIconPicker = false
     @State private var showSyncAlert = false
     @State private var syncAlertMessage = ""
     
@@ -72,9 +71,6 @@ struct SettingsView: View {
                     vaultViewModel: $vaultViewModel,
                     isPremium: .constant(isPremium)
                 )
-            }
-            .sheet(isPresented: $showAppIconPicker) {
-                AppIconPickerView(settingsManager: settingsManager, isPremium: isPremium)
             }
             .alert("Restore Purchases", isPresented: $showRestoreAlert) {
                 Button("OK", role: .cancel) { }
@@ -342,41 +338,10 @@ struct SettingsView: View {
     }
     
     // MARK: - Appearance Section
+    // App Icon picker hidden - only default icon available until alternate icons are created
     
     private var appearanceSection: some View {
         Section {
-            Button {
-                if isPremium {
-                    showAppIconPicker = true
-                } else {
-                    showPaywall = true
-                }
-            } label: {
-                HStack {
-                    ZStack {
-                        RoundedRectangle(cornerRadius: 10)
-                            .fill(settingsManager.selectedAppIcon.previewColor)
-                            .frame(width: 44, height: 44)
-                        Image(systemName: "lock.shield.fill")
-                            .foregroundStyle(.white)
-                    }
-                    VStack(alignment: .leading, spacing: 4) {
-                        Text("App Icon")
-                            .foregroundStyle(.primary)
-                        Text(settingsManager.selectedAppIcon.displayName)
-                            .font(.caption)
-                            .foregroundStyle(.secondary)
-                    }
-                    Spacer()
-                    if !isPremium {
-                        Image(systemName: "crown.fill")
-                            .foregroundStyle(.orange)
-                    }
-                    Image(systemName: "chevron.right")
-                        .foregroundStyle(.secondary)
-                }
-            }
-            
             Picker("Default Sort", selection: $settingsManager.vaultSortOrder) {
                 ForEach(AppSettingsManager.VaultSortOrder.allCases) { option in
                     Text(option.displayName).tag(option)
@@ -539,7 +504,7 @@ struct SettingsView: View {
                     .foregroundStyle(.secondary)
             }
             
-            Link(destination: URL(string: "https://techjonesai.co.uk/passwordvault/privacy")!) {
+            Link(destination: URL(string: "https://techjonesai.github.io/PasswordVault/privacy.html")!) {
                 HStack {
                     Text("Privacy Policy")
                     Spacer()
@@ -549,7 +514,17 @@ struct SettingsView: View {
                 }
             }
             
-            Link(destination: URL(string: "mailto:support@techjonesai.co.uk")!) {
+            Link(destination: URL(string: "https://techjonesai.github.io/PasswordVault/support.html")!) {
+                HStack {
+                    Text("Support")
+                    Spacer()
+                    Image(systemName: "arrow.up.forward")
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                }
+            }
+            
+            Link(destination: URL(string: "mailto:techjonesai9@gmail.com")!) {
                 HStack {
                     Text("Contact Support")
                     Spacer()
@@ -591,56 +566,6 @@ struct SettingsView: View {
             } else {
                 if let settingsUrl = URL(string: UIApplication.openSettingsURLString) {
                     UIApplication.shared.open(settingsUrl)
-                }
-            }
-        }
-    }
-}
-
-// MARK: - App Icon Picker View
-
-struct AppIconPickerView: View {
-    var settingsManager: AppSettingsManager
-    var isPremium: Bool
-    
-    @Environment(\.dismiss) private var dismiss
-    
-    var body: some View {
-        NavigationStack {
-            List {
-                ForEach(AppSettingsManager.AppIconOption.allCases) { icon in
-                    Button {
-                        settingsManager.changeAppIcon(to: icon)
-                    } label: {
-                        HStack(spacing: 16) {
-                            ZStack {
-                                RoundedRectangle(cornerRadius: 12)
-                                    .fill(icon.previewColor)
-                                    .frame(width: 60, height: 60)
-                                Image(systemName: "lock.shield.fill")
-                                    .font(.title2)
-                                    .foregroundStyle(.white)
-                            }
-                            Text(icon.displayName)
-                                .font(.headline)
-                                .foregroundStyle(.primary)
-                            Spacer()
-                            if settingsManager.selectedAppIcon == icon {
-                                Image(systemName: "checkmark.circle.fill")
-                                    .foregroundStyle(.green)
-                            }
-                        }
-                        .padding(.vertical, 8)
-                    }
-                }
-            }
-            .navigationTitle("App Icon")
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItem(placement: .cancellationAction) {
-                    Button("Done") {
-                        dismiss()
-                    }
                 }
             }
         }
