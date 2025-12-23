@@ -135,11 +135,21 @@
 			);
 			target = 628493462EF4BD060082A341 /* PasswordVaultShare */;
 		};
+		6284935C2EF4D7740082A341 /* Exceptions for "PasswordVault" folder in "PasswordVault" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 622F27BB2EDFB6CD00EF7D3F /* PasswordVault */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		622F27BE2EDFB6CD00EF7D3F /* PasswordVault */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				6284935C2EF4D7740082A341 /* Exceptions for "PasswordVault" folder in "PasswordVault" target */,
+			);
 			path = PasswordVault;
 			sourceTree = "<group>";
 		};
@@ -589,11 +599,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = PasswordVault/PasswordVault.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = Y7JDKP76G9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				"INFOPLIST_FILE[sdk=*]" = "";
+				"INFOPLIST_FILE[sdk=*]" = PasswordVault/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -623,11 +633,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = PasswordVault/PasswordVault.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = Y7JDKP76G9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				"INFOPLIST_FILE[sdk=*]" = "";
+				"INFOPLIST_FILE[sdk=*]" = PasswordVault/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

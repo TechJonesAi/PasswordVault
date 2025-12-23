@@ -278,7 +278,14 @@ final class SecureKeychainService {
                 ))
             }
             
-            store.replaceCredentialIdentities(with: identities) { _, _ in }
+            // Use new async API
+            Task {
+                do {
+                    try await store.replaceCredentialIdentities(identities)
+                } catch {
+                    print("❌ Failed to register AutoFill identities: \(error)")
+                }
+            }
         }
     }
     
@@ -359,7 +366,13 @@ final class SecureKeychainService {
         try deleteFromKeychain(account: creditCardsAccount)
         try deleteFromKeychain(account: encryptionKeyAccount)
         
-        ASCredentialIdentityStore.shared.removeAllCredentialIdentities { _, _ in }
+        Task {
+            do {
+                try await ASCredentialIdentityStore.shared.removeAllCredentialIdentities()
+            } catch {
+                print("❌ Failed to clear AutoFill identities: \(error)")
+            }
+        }
     }
 }
 

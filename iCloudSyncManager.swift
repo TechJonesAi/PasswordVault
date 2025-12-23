@@ -142,8 +142,9 @@ final class iCloudSyncManager {
     private func setupCloudKit() {
         container = CKContainer(identifier: containerIdentifier)
         privateDatabase = container?.privateCloudDatabase
-        zoneID = CKRecordZone.ID(zoneName: recordZoneName, ownerName: CKCurrentUserDefaultName)
-        recordZone = CKRecordZone(zoneID: zoneID!)
+        let newZoneID = CKRecordZone.ID(zoneName: recordZoneName, ownerName: CKCurrentUserDefaultName)
+        zoneID = newZoneID
+        recordZone = CKRecordZone(zoneID: newZoneID)
         
         // Create custom zone if needed
         createCustomZoneIfNeeded()
@@ -173,7 +174,7 @@ final class iCloudSyncManager {
     // MARK: - Subscriptions
     
     private func subscribeToChanges() {
-        guard let database = privateDatabase, let zoneID = zoneID else { return }
+        guard let database = privateDatabase, let _ = zoneID else { return }
         
         let subscriptionID = "vault-changes-subscription"
         
@@ -209,7 +210,7 @@ final class iCloudSyncManager {
             throw SyncError.iCloudUnavailable
         }
         
-        guard let database = privateDatabase, let zoneID = zoneID else {
+        guard let database = privateDatabase, let _ = zoneID else {
             throw SyncError.notConfigured
         }
         
@@ -362,35 +363,35 @@ final class iCloudSyncManager {
         let query = CKQuery(recordType: credentialRecordType, predicate: NSPredicate(value: true))
         
         return try await withCheckedThrowingContinuation { continuation in
-            database.perform(query, inZoneWith: zoneID) { records, error in
-                if let error = error {
+            database.fetch(withQuery: query, inZoneWith: zoneID) { result in
+                switch result {
+                case .success(let (matchResults, _)):
+                    let credentials = matchResults.compactMap { (recordID, recordResult) -> Credential? in
+                        guard case .success(let record) = recordResult,
+                              let id = UUID(uuidString: record.recordID.recordName) else { return nil }
+                        
+                        let folderRaw = record["folder"] as? String
+                        let folder = folderRaw.flatMap { PasswordFolder(rawValue: $0) }
+                        
+                        return Credential(
+                            id: id,
+                            websiteName: record["websiteName"] as? String ?? "",
+                            websiteURL: record["websiteURL"] as? String,
+                            username: record["username"] as? String ?? "",
+                            password: record["password"] as? String ?? "",
+                            notes: record["notes"] as? String,
+                            createdDate: record["createdDate"] as? Date ?? Date(),
+                            lastModifiedDate: record["lastModifiedDate"] as? Date ?? Date(),
+                            folder: folder,
+                            isFavourite: (record["isFavourite"] as? Int ?? 0) == 1,
+                            passwordLastChanged: record["passwordLastChanged"] as? Date,
+                            expiryReminderDays: record["expiryReminderDays"] as? Int
+                        )
+                    }
+                    continuation.resume(returning: credentials)
+                case .failure(let error):
                     continuation.resume(throwing: error)
-                    return
                 }
-                
-                let credentials = (records ?? []).compactMap { record -> Credential? in
-                    guard let id = UUID(uuidString: record.recordID.recordName) else { return nil }
-                    
-                    let folderRaw = record["folder"] as? String
-                    let folder = folderRaw.flatMap { PasswordFolder(rawValue: $0) }
-                    
-                    return Credential(
-                        id: id,
-                        websiteName: record["websiteName"] as? String ?? "",
-                        websiteURL: record["websiteURL"] as? String,
-                        username: record["username"] as? String ?? "",
-                        password: record["password"] as? String ?? "",
-                        notes: record["notes"] as? String,
-                        createdDate: record["createdDate"] as? Date ?? Date(),
-                        lastModifiedDate: record["lastModifiedDate"] as? Date ?? Date(),
-                        folder: folder,
-                        isFavourite: (record["isFavourite"] as? Int ?? 0) == 1,
-                        passwordLastChanged: record["passwordLastChanged"] as? Date,
-                        expiryReminderDays: record["expiryReminderDays"] as? Int
-                    )
-                }
-                
-                continuation.resume(returning: credentials)
             }
         }
     }
@@ -401,30 +402,30 @@ final class iCloudSyncManager {
         let query = CKQuery(recordType: secureNoteRecordType, predicate: NSPredicate(value: true))
         
         return try await withCheckedThrowingContinuation { continuation in
-            database.perform(query, inZoneWith: zoneID) { records, error in
-                if let error = error {
+            database.fetch(withQuery: query, inZoneWith: zoneID) { result in
+                switch result {
+                case .success(let (matchResults, _)):
+                    let notes = matchResults.compactMap { (recordID, recordResult) -> SecureNote? in
+                        guard case .success(let record) = recordResult,
+                              let id = UUID(uuidString: record.recordID.recordName) else { return nil }
+                        
+                        let folderRaw = record["folder"] as? String
+                        let folder = folderRaw.flatMap { PasswordFolder(rawValue: $0) }
+                        
+                        return SecureNote(
+                            id: id,
+                            title: record["title"] as? String ?? "",
+                            content: record["content"] as? String ?? "",
+                            folder: folder,
+                            isFavourite: (record["isFavourite"] as? Int ?? 0) == 1,
+                            createdDate: record["createdDate"] as? Date ?? Date(),
+                            lastModifiedDate: record["lastModifiedDate"] as? Date ?? Date()
+                        )
+                    }
+                    continuation.resume(returning: notes)
+                case .failure(let error):
                     continuation.resume(throwing: error)
-                    return
                 }
-                
-                let notes = (records ?? []).compactMap { record -> SecureNote? in
-                    guard let id = UUID(uuidString: record.recordID.recordName) else { return nil }
-                    
-                    let folderRaw = record["folder"] as? String
-                    let folder = folderRaw.flatMap { PasswordFolder(rawValue: $0) }
-                    
-                    return SecureNote(
-                        id: id,
-                        title: record["title"] as? String ?? "",
-                        content: record["content"] as? String ?? "",
-                        folder: folder,
-                        isFavourite: (record["isFavourite"] as? Int ?? 0) == 1,
-                        createdDate: record["createdDate"] as? Date ?? Date(),
-                        lastModifiedDate: record["lastModifiedDate"] as? Date ?? Date()
-                    )
-                }
-                
-                continuation.resume(returning: notes)
             }
         }
     }
@@ -435,36 +436,36 @@ final class iCloudSyncManager {
         let query = CKQuery(recordType: creditCardRecordType, predicate: NSPredicate(value: true))
         
         return try await withCheckedThrowingContinuation { continuation in
-            database.perform(query, inZoneWith: zoneID) { records, error in
-                if let error = error {
+            database.fetch(withQuery: query, inZoneWith: zoneID) { result in
+                switch result {
+                case .success(let (matchResults, _)):
+                    let cards = matchResults.compactMap { (recordID, recordResult) -> CreditCard? in
+                        guard case .success(let record) = recordResult,
+                              let id = UUID(uuidString: record.recordID.recordName) else { return nil }
+                        
+                        let cardTypeRaw = record["cardType"] as? String ?? ""
+                        let cardType = CardType(rawValue: cardTypeRaw) ?? .unknown
+                        
+                        return CreditCard(
+                            id: id,
+                            cardName: record["cardName"] as? String ?? "",
+                            cardholderName: record["cardholderName"] as? String ?? "",
+                            cardNumber: record["cardNumber"] as? String ?? "",
+                            expiryMonth: record["expiryMonth"] as? Int ?? 1,
+                            expiryYear: record["expiryYear"] as? Int ?? 2025,
+                            cvv: record["cvv"] as? String ?? "",
+                            cardType: cardType,
+                            billingAddress: record["billingAddress"] as? String,
+                            notes: record["notes"] as? String,
+                            isFavourite: (record["isFavourite"] as? Int ?? 0) == 1,
+                            createdDate: record["createdDate"] as? Date ?? Date(),
+                            lastModifiedDate: record["lastModifiedDate"] as? Date ?? Date()
+                        )
+                    }
+                    continuation.resume(returning: cards)
+                case .failure(let error):
                     continuation.resume(throwing: error)
-                    return
                 }
-                
-                let cards = (records ?? []).compactMap { record -> CreditCard? in
-                    guard let id = UUID(uuidString: record.recordID.recordName) else { return nil }
-                    
-                    let cardTypeRaw = record["cardType"] as? String ?? ""
-                    let cardType = CardType(rawValue: cardTypeRaw) ?? .unknown
-                    
-                    return CreditCard(
-                        id: id,
-                        cardName: record["cardName"] as? String ?? "",
-                        cardholderName: record["cardholderName"] as? String ?? "",
-                        cardNumber: record["cardNumber"] as? String ?? "",
-                        expiryMonth: record["expiryMonth"] as? Int ?? 1,
-                        expiryYear: record["expiryYear"] as? Int ?? 2025,
-                        cvv: record["cvv"] as? String ?? "",
-                        cardType: cardType,
-                        billingAddress: record["billingAddress"] as? String,
-                        notes: record["notes"] as? String,
-                        isFavourite: (record["isFavourite"] as? Int ?? 0) == 1,
-                        createdDate: record["createdDate"] as? Date ?? Date(),
-                        lastModifiedDate: record["lastModifiedDate"] as? Date ?? Date()
-                    )
-                }
-                
-                continuation.resume(returning: cards)
             }
         }
     }

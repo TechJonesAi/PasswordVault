@@ -453,11 +453,13 @@ final class KeychainService {
                 }
             }
             
-            store.replaceCredentialIdentities(with: identities) { success, error in
-                if let error = error {
-                    print("❌ Failed to register AutoFill identities: \(error)")
-                } else {
+            // Use new async API
+            Task {
+                do {
+                    try await store.replaceCredentialIdentities(identities)
                     print("✅ Registered \(identities.count) identities for \(credentials.count) credentials with AutoFill")
+                } catch {
+                    print("❌ Failed to register AutoFill identities: \(error)")
                 }
             }
         }
@@ -472,11 +474,12 @@ final class KeychainService {
         sharedDefaults?.removeObject(forKey: creditCardsKey)
         sharedDefaults?.synchronize()
         
-        ASCredentialIdentityStore.shared.removeAllCredentialIdentities { success, error in
-            if let error = error {
-                print("❌ Failed to clear AutoFill identities: \(error)")
-            } else {
+        Task {
+            do {
+                try await ASCredentialIdentityStore.shared.removeAllCredentialIdentities()
                 print("✅ Cleared all AutoFill identities")
+            } catch {
+                print("❌ Failed to clear AutoFill identities: \(error)")
             }
         }
         

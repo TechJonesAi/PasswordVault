@@ -514,6 +514,16 @@ struct SettingsView: View {
                 }
             }
             
+            Link(destination: URL(string: "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/")!) {
+                HStack {
+                    Text("Terms of Use (EULA)")
+                    Spacer()
+                    Image(systemName: "arrow.up.forward")
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                }
+            }
+            
             Link(destination: URL(string: "https://techjonesai.github.io/PasswordVault/support.html")!) {
                 HStack {
                     Text("Support")

@@ -17,6 +17,8 @@ struct PaywallView: View {
     
     @State private var selectedProduct: Product?
     @State private var initialPremiumStatus: Bool?
+    @State private var showRestoreAlert = false
+    @State private var restoreMessage = ""
     
     var body: some View {
         NavigationStack {
@@ -44,6 +46,20 @@ struct PaywallView: View {
                             .multilineTextAlignment(.center)
                     }
                     .padding()
+                    
+                    // Subscription Info (Required by Apple)
+                    VStack(spacing: 8) {
+                        Text("Premium Subscription Options:")
+                            .font(.headline)
+                        Text("• Monthly: $1.99/month")
+                            .font(.subheadline)
+                        Text("• Yearly: $18.00/year")
+                            .font(.subheadline)
+                    }
+                    .padding()
+                    .background(Color(.systemGray6))
+                    .cornerRadius(10)
+                    .padding(.horizontal)
                     
                     // Feature comparison
                     VStack(spacing: 16) {
@@ -128,23 +144,33 @@ struct PaywallView: View {
                     Button {
                         restorePurchases()
                     } label: {
-                        Text("Restore Purchases")
+                        if premiumManager.isLoading {
+                            HStack {
+                                ProgressView()
+                                    .scaleEffect(0.8)
+                                Text("Restoring...")
+                            }
                             .font(.subheadline)
                             .foregroundStyle(.blue)
+                        } else {
+                            Text("Restore Purchases")
+                                .font(.subheadline)
+                                .foregroundStyle(.blue)
+                        }
                     }
                     .disabled(premiumManager.isLoading)
                     
-                    // Fine print
+                    // Fine print (Required by Apple)
                     VStack(spacing: 8) {
-                        Text("Subscription automatically renews unless auto-renew is turned off at least 24 hours before the end of the current period.")
+                        Text("Subscription automatically renews unless auto-renew is turned off at least 24 hours before the end of the current period. Your account will be charged for renewal within 24 hours prior to the end of the current period. You can manage and cancel your subscriptions by going to your App Store account settings after purchase.")
                             .font(.caption2)
                             .foregroundStyle(.secondary)
                             .multilineTextAlignment(.center)
                         
                         HStack(spacing: 16) {
-                            Link("Privacy Policy", destination: URL(string: "https://example.com/privacy")!)
+                            Link("Privacy Policy", destination: URL(string: "https://techjonesai.github.io/PasswordVault/privacy.html")!)
                             Text("•")
-                            Link("Terms of Use", destination: URL(string: "https://example.com/terms")!)
+                            Link("Terms of Use (EULA)", destination: URL(string: "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/")!)
                         }
                         .font(.caption2)
                         .foregroundStyle(.blue)
@@ -159,6 +185,17 @@ struct PaywallView: View {
                         isPresented = false
                     }
                 }
+            }
+            .alert("Restore Purchases", isPresented: $showRestoreAlert) {
+                Button("OK", role: .cancel) {
+                    // If premium was restored, dismiss paywall
+                    if premiumManager.isPremium {
+                        onPurchaseComplete()
+                        isPresented = false
+                    }
+                }
+            } message: {
+                Text(restoreMessage)
             }
         }
         .onAppear {
@@ -214,7 +251,18 @@ struct PaywallView: View {
     
     private func restorePurchases() {
         Task {
+            print("🔄 Starting restore purchases...")
             await premiumManager.restorePurchases()
+            
+            // Show result to user
+            await MainActor.run {
+                if premiumManager.isPremium {
+                    restoreMessage = "Premium successfully restored!"
+                } else {
+                    restoreMessage = "No active subscriptions found. If you believe this is an error, please contact support."
+                }
+                showRestoreAlert = true
+            }
         }
     }
 }
@@ -249,7 +297,7 @@ struct FeatureRow: View {
                     
                     Label(premiumValue, systemImage: "checkmark.circle.fill")
                         .font(.caption)
-                        .foregroundStyle(isPremium ? .green : .secondary)
+                        .foregroundStyle(.green)
                 }
             }
             
